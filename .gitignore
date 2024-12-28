@@ -1,0 +1,35 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+local.rayan.ir-key.pem
+local.rayan.ir.pem
+.rar
+*.log*
+dist
+.vscode
+yarn-error.log
+
+*.zip
+*.rar
