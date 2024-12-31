@@ -5,26 +5,16 @@
            v-model="keyword">
   </div>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
-    <div v-for="meal in meals" :key="meal.idMeal" class="bg-white shadow rounded-xl">
-      <router-link :to="{name: 'mealDetails', params: {id: meal.idMeal}}">
-        <img :src="meal.strMealThumb" :alt="meal.strMeal" class="rounded-t-xl w-full h-48 object-cover">
-      </router-link>
-      <div class="p-3">
-        <h3 class="font-bold">{{ meal.strMeal }}</h3>
-        <p class="mb-4"></p>
-        <div class="flex justify-between items-center">
-          <you-tube-button :href="meal.strYoutube"/>
-        </div>
-      </div>
-    </div>
+    <MealItem  v-for="meal in meals" :key="meal.idMeal" :meal="meal"/>
   </div>
+
 
 </template>
 <script setup lang="ts">
 import {computed, onMounted, ref} from "vue";
 import store from '../store'
 import {useRoute} from "vue-router";
-import YouTubeButton from "../components/YouTubeButton.vue";
+import MealItem from "../components/MealItem.vue";
 
 const keyword = ref('')
 const meals = computed(() => store.state.searchMeals)
