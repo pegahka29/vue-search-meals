@@ -13,7 +13,7 @@
     </router-link>
   </div>
 
-  <Meals :meals="meals" />
+  <Meals  v-if="route.params.letter" :meals="meals" />
 </template>
 
 <script setup>
