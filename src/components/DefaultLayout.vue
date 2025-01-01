@@ -1,17 +1,12 @@
-<script setup lang="ts">
-
-import NavBar from "./NavBar.vue";
-</script>
-
 <template>
-  <div class="bg-gray-100 h-full">
-    <NavBar></NavBar>
+  <navbar />
   <main>
-    <router-view/>
+    <div class="max-w-[1200px] mx-auto">
+      <router-view />
+    </div>
   </main>
-  </div>
 </template>
 
-<style scoped>
-
-</style>
+<script setup>
+import Navbar from "../components/Navbar.vue";
+</script>

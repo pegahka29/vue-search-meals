@@ -1,15 +1,15 @@
 <template>
-  <a :href="href" target="_blank"
-     class="px-3 rounded py-2 border-2 border-red-600 hover:bg-red-600 hover:text-white transition-colors">
-<!--    <slot/>-->
-    YouTube
+  <a
+    :href="href"
+    target="_blank"
+    class="px-3 py-2 rounded border-2 text-white border-orange-600 bg-orange-500 hover:bg-orange-600 transition-colors"
+  >
+    <slot>YouTube</slot>
   </a>
 </template>
-<script setup lang="ts">
-const porps = defineProps({
+
+<script setup>
+const props = defineProps({
   href: String
 })
 </script>
-<style scoped>
-
-</style>
